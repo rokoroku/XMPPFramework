@@ -4562,6 +4562,8 @@ enum XMPPStreamConfig
 		{
 			// The response from our start session request
 			[self handleStartSessionResponse:element];
+
+            [self receiveIQ:[XMPPIQ iqFromElement:element]];
 		}
 	}
 	else
